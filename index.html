@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CACHETA ZHF</title>
+<style>
+* {
+    font-family: Verdana, Geneva, sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #fbf1ec;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #c7bcb7;
+}
+.nomejogadores {
+    width: calc(50% - 35px)!important;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+span.jogadores {
+    background: #c7bcb7;
+    width: 20px;
+    border-radius: 68px;
+    padding: 22px;
+    display: inline-block;
+    text-align: center;
+}
+div#Jogadores {
+    width: 500px;
+}
+#njogadores {
+    padding: 10px 67px;
+    height: 35px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin: 5px auto;
+    text-align: center;
+    text-align-last: center;
+}
+#btnjogadores {
+    padding: 10px 67px;
+    height: 35px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin: 20px auto;
+    text-align: center;
+    text-align-last: center;
+}
+#redefinir {
+    padding: 10px 67px;
+    height: 35px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin: 20px auto;
+    text-align: center;
+    text-align-last: center;
+}
+.selectplayers {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin: 30px auto 15px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+	<script>
+		maxplayes = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+        function recarregar() {
+            
+            location.reload();
+        }
+        
+        //primeira parte
+        function definirJogadores() {
+            document.getElementById("definirNomeDeJogadores").innerHTML = "";
+            players = 0;
+            players = document.getElementById("njogadores").value;
+            //alert('Número de jogadores definido em: ' + players);
+                for (i = 0; i < players; i++) {
+                    var x = document.createElement("INPUT");
+                    x.setAttribute("type", "text");
+                    x.setAttribute("class", "nomejogadores");
+                    x.setAttribute("id", maxplayes[i]);
+                    x.setAttribute("value", maxplayes[i]);
+                    document.getElementById("definirNomeDeJogadores").appendChild(x);
+                }
+             document.getElementById("btnjogadores").setAttribute("style", "display:block"); 
+             document.getElementById("njogadores").setAttribute("style", "display:none"); 
+             document.getElementsByClassName("selectplayers")[0].setAttribute("style", "display:none"); 
+             document.getElementsByClassName("selectplayers")[1].setAttribute("style", "display:block"); 
+             document.getElementById("redefinir").setAttribute("style", "display:block"); 
+        }
+        
+        //segunda parte - juntar jogadores definidos em objeto e montar layout.
+        function jogadoresEmObjeto
+        
+        
+        
+        
+        //terceira parte - montar tabela
+        
+        
+        
+        
+        // quarta parte - controles da partida
+        
+        
+        
+        
+        // quinta parte - entrar quando perder
+        
+        
+        
+        
+        
+        
+	</script>
+
+    <div id="definirJogo">
+        <form>
+            <span class="text selectplayers">Defina a quantidade de jogadores:</span>
+            <span class="text selectplayers" style="display:none">Definir nome de jogadores:</span>
+            <select id="njogadores" onchange="javascript:definirJogadores();">
+              <option value="1">1</option> 
+              <option value="2">2</option> 
+              <option value="3">3</option> 
+              <option value="4">4</option>
+              <option value="5">5</option> 
+              <option value="6">6</option> 
+              <option value="7">7</option> 
+              <option value="8">8</option> 
+              <option value="9">9</option>
+            </select>
+        </form>
+
+	<form id="definirNomeDeJogadores" style="margin: 20px -5px 0;">
+	</form>
+	
+	<button type="button" id="btnjogadores"  onclick="definirNomesDosJogadores()" style="display:none;">DEFINIR NOMES</button>
+	<button type="button" id="redefinir"  onclick="recarregar()" style="display:none;">REDEFINIR</button>
+	
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="placarJogo" style="display: none">
+        <h1>JOGADORES</h1>
+        <div id="Jogadores">
+            <span class="jogadores">O</span>
+            <span class="jogadores">O</span>
+            <span class="jogadores">D</span>
+            <span class="jogadores">J</span>
+            <span class="jogadores">J</span>
+            <span class="jogadores">J</span>
+        </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
